@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>
+      Rails Music
+    </title>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/docs.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+  </head>
+  <body ng-app="appHome">
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../" class="navbar-brand">Rails Music</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#">Getting started</a>
+            </li>
+            <li>
+              <a href="#">Lorem</a>
+            </li>
+            <li>
+              <a href="#">Ipsum</a>
+            </li>
+            <li>
+              <a href="#">Dolor</a>
+            </li>
+            <li>
+              <a href="#">Sit amet</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-controller="modalCtrl">
+              <a class="btn btn-empty" ng-click="open()">Sign In</a>
+            </li>
+            <li>
+              <a class="btn btn-empty btn-lg" href="sign_up_page.html">Sign Up</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Carousel
+      ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" ng-controller="carouselCtrl">
+      <carousel interval="interval">
+        <slide ng-repeat="slide in slides">
+          <img ng-src="{{slide.image}}">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3>{{slide.title}}</h3>
+              <p>{{slide.text}}</p>
+              <p>
+                <button class="btn-lg btn-live" href="#" role="button">Read more
+                </button>
+              </p>
+            </div>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+    <!-- /.carousel -->
+
+    <div class="bs-docs-featurette" ng-controller="liveCtrl">
+      <div class="container">
+        <!-- post item -->
+        <div class="post-item style3" ng-repeat="post in posts">
+          <div class="post-image">
+            <img ng-src="{{post.image}}" alt="" />
+          </div>
+          <div class="clearfix">
+            <div class="post-content">
+              <h2 class="post-title">{{post.title}}</h2>
+              <h6 class="post-subtitle">{{post.musician}}</h6>
+              <div class="post-desc">
+                <p>{{post.text}}</p>
+              </div>
+            </div>
+            <div class="post-meta-bot" ng-repeat="date in post.dates">
+              <div class="post-event-date">
+                <strong>{{date.day}}</strong>
+                <p><span>{{date.month}}</span>
+                <em>/{{date.year}}</em>
+                <br />{{post.concert}}</p>
+              </div>
+            </div>
+            <div class="read-more">
+              <button href="#" class="btn-live btn-lg" > Read more</button>
+            </div>
+          </div>
+        </div>
+        <!--/ post item -->
+      </div>
+    </div>
+    <div class="body-wrap" ng-controller="postItem">
+      <div class="container">
+        <!-- row-->
+        <div class="row content">
+          <div class="col-sm-4" ng-repeat="post_item in post_items">
+            <div class="post-item-popular boxed" >
+              <div class="post-meta-top">
+                <h2 class="post-title">{{post_item.title}}</h2>
+                <h6 class="post-subtitle">{{post_item.subtitle}}</h6>
+                <ul class="post-links-alt">
+                  <li class="post-date">
+                    <a href="#">{{post_item.date}}</a>
+                  </li>
+                  <li class="post-author">
+                    <a href="#">{{post_item.author}}</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="post-image">
+                <img src="{{post_item.image}}" alt="" />
+              </div>
+              <div class="post-desc">
+                <p>{{post_item.text}}</p>
+              </div>
+              <div class="post-meta-bot">
+                <ul class="post-links clearfix">
+                  <li class="post-comments">
+                    <a href="#">
+                      <i class="icon-small-comment"></i>545
+                    </a>
+                  </li>
+                  <li class="post-more">
+                    <a href="#">
+                      <i class="icon-small-next"></i>Read more
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-bottom">
+        <!-- container-->
+        <div class="container">
+          <!-- row -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="footer-social">
+                <a class="facebook" href="#">
+                  <span class="icon-small-facebook"></span>
+                </a>
+                <a href="#" class="google">
+                  <span class="icon-small-google"></span>
+                </a>
+                <a href="#" class="twitter">
+                  <span class="icon-small-twitter"></span>
+                </a>
+                <a href="#" class="pinterest">
+                  <span class="icon-small-pinterest"></span>
+                </a>
+              </div>
+              <a href="#" class="copyright">All rights reserved</a>
+            </div>
+          </div>
+          <!--/ row -->
+        </div>
+        <!--/ container-->
+      </div>
+    </div>
+    <script type="text/ng-template" id="modalContent.html">
+      <div class="signin" ng-controller="modalCtrl">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="modal-header">
+              <h4 class="modal-title">Sign in with your social account!</h4>
+              <div class="footer-social">
+                <a class="facebook" href="#">
+                  <span class="icon-small-facebook"></span>
+                </a>
+                <a href="#" class="google">
+                  <span class="icon-small-google"></span>
+                </a>
+                <a href="#" class="twitter">
+                  <span class="icon-small-twitter"></span>
+                </a>
+                <a href="#" class="pinterest">
+                  <span class="icon-small-pinterest"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="modal-body">
+              <div class="or">
+                <div class="or_l"></div>
+                <span>or</span>
+                <div class="or_r"></div>
+              </div>
+              <form name="loginForm" ng-submit="loginForm.$valid && addUser()" novalidate>
+                <div class="section-title">
+                  <h6>LogIn to your Account</h6>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="field_text">
+                      <div class="input-group">
+                        <input type="email" ng-model="user_email" placeholder="Email" class="form-control" required/>
+                      </div>
+                    </div>
+                    <div class="field_text">
+                      <div class="input-group">
+                        <input ng-model="user_password" type="password" placeholder="Password" class="form-control" required/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn-lg green-btn" role="button">Log In
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+  </body>
+</html>
