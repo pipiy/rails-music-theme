@@ -320,3 +320,6 @@ body {
 .indent {
   margin-bottom: 15px;
 }
+.page-header .img-size {
+  width: 20%;
+}
