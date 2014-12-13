@@ -16,13 +16,39 @@
     <script src="assets/js/app.js"></script>
     <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
   </head>
-  <body>
+  <body ng-app="appHome">
     <div class="container" data-provides="fileinput">
       <div class="signup">
         <header class="page-header">
           <img class="img-size img-circle img-thumbnail" src="assets/images/account-avatar.png">
           <h4>Create an account</h4>
         </header>
+      </div>
+    </div>
+    <div class="tab-panel" ng-controller="tabCtrl">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-justified">
+              <li ng-class="{active:isSelected(1)}">
+                <a href ng-click="selectTab(1)">Audio</a>
+              </li>
+              <li ng-class="{active:isSelected(2)}">
+                <a href ng-click="selectTab(2)" >Video</a>
+              </li>
+              <li ng-class="{active:isSelected(3)}">
+                <a href ng-click="selectTab(3)">Settings</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div ng-show="isSelected(1)">ololol</div>
+              <div ng-show="isSelected(2)">asdasd</div>
+              <div ng-show="isSelected(3)">piypiy</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
