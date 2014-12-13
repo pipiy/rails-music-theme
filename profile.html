@@ -18,7 +18,7 @@
   </head>
   <body ng-app="appHome">
     <div class="container" data-provides="fileinput">
-      <div class="signup">
+      <div class="profile">
         <header class="page-header">
           <img class="img-size img-circle img-thumbnail" src="assets/images/account-avatar.png">
           <h4>Create an account</h4>
@@ -31,13 +31,13 @@
           <div class="col-md-12">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs nav-justified">
-              <li ng-class="{active:isSelected(1)}">
+              <li class="blue-tab" ng-class="{active:isSelected(1)}">
                 <a href ng-click="selectTab(1)">Audio</a>
               </li>
-              <li ng-class="{active:isSelected(2)}">
+              <li class="blue-tab" ng-class="{active:isSelected(2)}">
                 <a href ng-click="selectTab(2)" >Video</a>
               </li>
-              <li ng-class="{active:isSelected(3)}">
+              <li class="red-tab" ng-class="{active:isSelected(3)}">
                 <a href ng-click="selectTab(3)">Settings</a>
               </li>
             </ul>
