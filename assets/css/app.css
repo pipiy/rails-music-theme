@@ -331,6 +331,7 @@ body {
 -------------------------------------------------- */
 .nav-tabs {
   font-size: 18px;
+  margin-bottom: 50px;
 }
 .nav-tabs.nav-justified > li a {
   border: 1px solid transparent;
@@ -365,3 +366,6 @@ body {
   cursor: default;
   border-radius: 0;
 }
+
+/* Edit Form Css
+-------------------------------------------------- */
