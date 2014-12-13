@@ -323,3 +323,45 @@ body {
 .page-header .img-size {
   width: 20%;
 }
+.profile .page-header {
+  border-bottom: 0 !important;
+}
+
+/* Tab Css
+-------------------------------------------------- */
+.nav-tabs {
+  font-size: 18px;
+}
+.nav-tabs.nav-justified > li a {
+  border: 1px solid transparent;
+  color: #ffffff;
+}
+.tab-panel .blue-tab {
+  border: 1px solid #ffffff;
+  background-color: #2980b9;
+}
+.tab-panel .red-tab {
+  border: 1px solid #ffffff;
+  background-color: #AD5251;
+}
+.nav-tabs.nav-justified > .blue-tab a:hover {
+  color: #ffffff;
+  border-color: #2980b9;
+  background-color: #2980b9;
+  border-radius: 0;
+}
+.nav-tabs.nav-justified > .red-tab a:hover {
+  color: #ffffff;
+  border-color: #AD5251;
+  background-color: #AD5251;
+  border-radius: 0;
+}
+.nav-tabs.nav-justified > li.active > a,
+.nav-tabs.nav-justified > li.active > a:hover,
+.nav-tabs.nav-justified > li.active > a:focus {
+  color: #ffffff;
+  background-color: rgba(63, 21, 30, 0.12);
+  border-bottom-color: transparent;
+  cursor: default;
+  border-radius: 0;
+}
