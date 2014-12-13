@@ -108,3 +108,15 @@ app.controller("signupCtrl", function($scope){
 		}
 	};
 });
+
+app.controller("tabCtrl", function($scope){
+	$scope.tab = 1;
+
+	$scope.selectTab = function(setTab){
+		$scope.tab = setTab;
+	}
+
+	$scope.isSelected = function(isSet){
+		return $scope.tab === isSet;
+	}
+});
