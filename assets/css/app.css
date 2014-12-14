@@ -326,7 +326,26 @@ body {
 .profile .page-header {
   border-bottom: 0 !important;
 }
-
+/* Popover form
+-------------------------------------------------- */
+@media (min-width: 479px){
+  .bs-example-popover {
+    width: 58%;
+    margin: 0 auto; 
+  }
+}
+@media (min-width: 768px){
+  .bs-example-popover {
+    width: 41%;
+    margin: 0 auto; 
+  }
+}
+@media (min-width: 991px){
+  .bs-example-popover {
+    width: 33%;
+    margin: 0 auto; 
+  }
+}
 /* Tab Css
 -------------------------------------------------- */
 .nav-tabs {
