@@ -10,6 +10,7 @@
     <link href="assets/css/app.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/jasny-bootstrap.css" rel="stylesheet">
+    <link href="assets/css/docs.min.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/js/jasny-bootstrap.js"></script>
@@ -19,6 +20,15 @@
   <body ng-app="appProfile" ng-controller="profileCtrl">
     <div class="profile fileinput-new" data-provides="fileinput">
       <div class="container">
+        <div class="bs-example-popover" ng-show="twitt">
+          <div class="popover top">
+            <div class="arrow"></div>
+            <h3 class="popover-title">{{first_name}} says:</h3>
+            <div class="popover-content">
+              <p>{{twitt}}</p>
+            </div>
+          </div>
+        </div>
         <header class="page-header">
           <div class="fileinput-new">
             <img class="img-size img-thumbnail img-responsive" ng-src="assets/images/account-avatar.png">
@@ -28,7 +38,6 @@
           </div>
           <h4>{{first_name}} {{last_name}}</h4>
           <h6>{{email}}</h6>
-          <h6>{{twitt}}</h6>
         </header>
       </div>
       <div class="tab-panel">
@@ -49,7 +58,9 @@
               </ul>
               <!-- Tab panes -->
               <div class="tab-content">
-                <div ng-show="isSelected(1)">ololol</div>
+                <div ng-show="isSelected(1)">
+                oldldlddl
+                </div>
                 <div ng-show="isSelected(2)">asdasd</div>
                 <div ng-show="isSelected(3)">
                   <div class="edit-form">
