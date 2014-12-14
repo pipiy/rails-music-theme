@@ -321,7 +321,7 @@ body {
   margin-bottom: 15px;
 }
 .page-header .img-size {
-  width: 20%;
+  max-width: 20%;
 }
 .profile .page-header {
   border-bottom: 0 !important;
@@ -369,3 +369,7 @@ body {
 
 /* Edit Form Css
 -------------------------------------------------- */
+.img-center {
+  width: 20%;
+  margin: 0 auto;
+}
