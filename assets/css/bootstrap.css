@@ -3498,9 +3498,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a > img {
   max-width: none;
 }
-.nav-tabs {
+/*.nav-tabs {
   border-bottom: 1px solid #ddd;
 }
+*/
 .nav-tabs > li {
   float: left;
   margin-bottom: -1px;
@@ -3520,7 +3521,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #555;
   cursor: default;
   background-color: #fff;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
   border-bottom-color: transparent;
 }
 .nav-tabs.nav-justified {
