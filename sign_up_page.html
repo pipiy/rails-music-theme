@@ -13,12 +13,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-    <script src="assets/js/app.js"></script>
     <script src="assets/js/jasny-bootstrap.js"></script>
-    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="assets/js/controllers/signupctrl.js"></script>
   </head>
-  <body ng-app="appHome" ng-controller="signupCtrl">
+  <body ng-app="appSignUp" ng-controller="signupCtrl">
 		<div class="container" data-provides="fileinput">
 			<div class="signup">
 		    <header class="page-header">
@@ -28,7 +27,7 @@
 				<div class="row">
 					<div class="signup_form">
 						<form name="signupForm" ng-submit="signupForm.$valid && new_user()" novalidate>
-					    <div class="panel	">
+					    <div class="panel">
 					      <div class="panel-heading">
 					        <div class="row">
 					          <div class="col-md-12">
@@ -94,9 +93,6 @@
 				            <div class="col-md-4">
 				              <figure>
 				              	<div class="fileinput-preview fileinput-exists">
-			                	</div>
-				              	<div class="white-content">
-				                	<img class="img-thumbnail img-responsive" ng-src="image" ng-show="user_image">
 			                	</div>
 				              </figure>
 				            </div>
