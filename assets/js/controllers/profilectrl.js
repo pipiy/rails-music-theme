@@ -13,6 +13,9 @@ angular.module("appProfile", [])
 
 		// Edit user form
 		$scope.edit_users = [];
+		$scope.first_name = "John";
+		$scope.last_name = "Doe";
+		$scope.email = "johndoe@example.com";
 
 		$scope.edit_user = function(){
 			$scope.edit_users.push({
