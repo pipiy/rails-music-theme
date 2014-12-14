@@ -29,4 +29,13 @@ angular.module("appProfile", [])
 			$scope.email = '';
 			$scope.twitt = '';
 		};
+
+		//Social links
+		$scope.social_links = [];
+		$scope.social_placeholder = "http://www.example.com"
+		$scope.addSocial = function() {
+			$scope.social_links.push({
+				social_name: 	$scope.social_name
+			});
+		}
 	}]);
