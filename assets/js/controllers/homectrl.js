@@ -15,7 +15,6 @@ angular.module("appHome", ['ui.bootstrap'])
 		};
 
 		// Live posts
-
 		$scope.posts = [{
 			image: "assets/images/post-img/post-img-3.jpg",
 			title: "Live Concert",
@@ -28,6 +27,7 @@ angular.module("appHome", ['ui.bootstrap'])
 			}],
 			concert: "Live Concert" 
 		}];
+		
 		// Blog  posts
 		$scope.post_items = 
 		[
@@ -68,7 +68,7 @@ angular.module("appHome", ['ui.bootstrap'])
 			});
 		}
 
-		// Sign in modal windows
+		// Sign in modal window
 
 		$scope.users = [];
 
