@@ -384,6 +384,7 @@ body {
 .edit-btn-avatar {
   margin-bottom: 20px;
 }
-.page-header h4 {
+.page-header h4, h6{
   margin-top: 20px;
+  font-family: Merriweather;
 }
