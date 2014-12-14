@@ -63,6 +63,7 @@
                 </div>
                 <div ng-show="isSelected(2)">asdasd</div>
                 <div ng-show="isSelected(3)">
+                  <h5>Edit your account</h5>
                   <div class="edit-form">
                     <form name="editForm" novalidate>
                       <div class="edit-btn-avatar">
@@ -105,27 +106,26 @@
                           </div>
                         </div>
                       </div>
-                      <h6>Add a social link</h6>
-                      <div class="panel">
-                        <div class="panel-edit">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="social-links" ng-repeat="link in social_links">
-                                <div class="form-group">
-                                  <div class="row">
-                                    <div class="col-sm-6">
-                                      <input type="text" ng-model="social_name" placeholder="{{social_placeholder}}">
-                                    </div>
+                      <h5>Add a social link</h5>
+                      <div class="social-panel">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="social-links" ng-repeat="link in social_links">
+                              <div class="form-group">
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                    <input type="text" ng-model="social_name" placeholder="{{social_placeholder}}">
                                   </div>
                                 </div>
                               </div>
-                              <div class="social-btn">
-                                <span ng-click="addSocial()"class="btn green-btn">Add</span>
-                              </div>
+                            </div>
+                            <div class="social-btn">
+                              <span ng-click="addSocial()"class="btn green-btn">Add</span>
                             </div>
                           </div>
-                        </div>    
+                        </div>
                       </div>
+                      <hr>
                     </form>
                   </div>
                 </div>

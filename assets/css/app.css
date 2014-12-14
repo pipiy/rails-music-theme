@@ -393,7 +393,10 @@ body {
   cursor: default;
   border-radius: 0;
 }
-
+.tab-content h5 {
+  margin-bottom: 20px;
+  text-align: center;
+}
 /* Edit Form Css
 -------------------------------------------------- */
 .img-center {
