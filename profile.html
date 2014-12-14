@@ -70,42 +70,41 @@
                         <span class=" btn-file btn green-btn"><span class="fileinput-new">Edit your Photo</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
                         <a href="#" class="btn red-btn fileinput-exists" data-dismiss="fileinput">Remove</a>
                       </div>
-                      <div class="panel">
-                        <div class="panel-edit">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                <div class="row">
-                                  <div class="col-sm-6">
-                                    <input type="text" ng-model="first_name" placeholder="First Name" required>
-                                  </div>
+                      <div class="panel-edit-form">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <input type="text" ng-model="first_name" placeholder="First Name" required>
                                 </div>
                               </div>
-                              <div class="form-group">
-                                <div class="row">
-                                  <div class="col-sm-6">
-                                    <input type="text" ng-model="last_name" placeholder="Last Name" required>
-                                  </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <input type="text" ng-model="last_name" placeholder="Last Name" required>
                                 </div>
                               </div>
-                              <div class="form-group">
-                                <div class="row">
-                                  <div class="col-sm-6">
-                                    <input type="email" ng-model="email" placeholder="Email" required>
-                                  </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <input type="email" ng-model="email" placeholder="Email" required>
                                 </div>
                               </div>
-                              <div class="form-group">
-                                <div class="row">
-                                  <div class="col-sm-8">
-                                    <textarea placeholder="Text Here" ng-model="twitt"></textarea>
-                                  </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="row">
+                                <div class="col-sm-8">
+                                  <textarea placeholder="Text Here" ng-model="twitt"></textarea>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <hr>
                       <h5>Add a social link</h5>
                       <div class="social-panel">
                         <div class="row">
@@ -115,6 +114,7 @@
                                 <div class="row">
                                   <div class="col-sm-6">
                                     <input type="text" ng-model="social_name" placeholder="{{social_placeholder}}">
+                                    <span class="btn red-btn" ng-click="removeLink($index)"></span>
                                   </div>
                                 </div>
                               </div>
