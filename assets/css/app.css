@@ -332,34 +332,42 @@ body {
 .nav-tabs {
   font-size: 18px;
   margin-bottom: 50px;
+  width: 50%;
+  margin: 0 auto;
 }
-.nav-tabs.nav-justified > li a {
+.nav-tabs > li a {
   border: 1px solid transparent;
   color: #ffffff;
+  text-align: center;
+}
+.nav-tabs > li {
+  margin-bottom: 50px;
 }
 .tab-panel .blue-tab {
   border: 1px solid #ffffff;
   background-color: #2980b9;
+  width: 30%;
 }
 .tab-panel .red-tab {
   border: 1px solid #ffffff;
   background-color: #AD5251;
+  width: 40%;
 }
-.nav-tabs.nav-justified > .blue-tab a:hover {
+.nav-tabs > .blue-tab a:hover {
   color: #ffffff;
   border-color: #2980b9;
   background-color: #2980b9;
   border-radius: 0;
 }
-.nav-tabs.nav-justified > .red-tab a:hover {
+.nav-tabs > .red-tab a:hover {
   color: #ffffff;
   border-color: #AD5251;
   background-color: #AD5251;
   border-radius: 0;
 }
-.nav-tabs.nav-justified > li.active > a,
-.nav-tabs.nav-justified > li.active > a:hover,
-.nav-tabs.nav-justified > li.active > a:focus {
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
   color: #ffffff;
   background-color: rgba(63, 21, 30, 0.12);
   border-bottom-color: transparent;
