@@ -35,7 +35,7 @@ angular.module("appProfile", [])
 		$scope.social_placeholder = "http://www.example.com"
 
 		$scope.addSocial = function(){
-			if($scope.social_links.length <= 3){
+			if($scope.social_links.length < 4){
 				$scope.social_links.push({
 					social_name: 	$scope.social_name
 				});
