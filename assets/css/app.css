@@ -407,7 +407,6 @@ body {
   margin-bottom: 20px;
 }
 .page-header h4, h6{
-  margin-top: 20px;
   font-family: Merriweather;
 }
 .submit-changes {
@@ -476,4 +475,56 @@ body {
   font-weight: normal;
   line-height: 18px;
   background-color: #c12e2a;
+}
+
+.social-links a {
+  margin-top: 10px;
+}
+.social-links .facebook {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #3b5998;
+  color: #fff;
+  border-radius: 2px;
+}
+.social-links .google {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #d34836;
+  color: #fff;
+  border-radius: 2px;
+}
+.social-links .twitter {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #33CCFF;
+  color: #fff;
+  border-radius: 2px;
+}
+.social-links .pinterest {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #e3262e;
+  color: #fff;
+  border-radius: 2px;
 }
