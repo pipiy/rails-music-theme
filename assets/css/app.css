@@ -417,3 +417,63 @@ body {
 .fileinput-new img {
   border-radius: 0;
 }
+.error-popover .error {
+  display:block;
+  width:260px;
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  text-align: left;
+  white-space: normal;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #c12e2a;
+}
+.error .right {
+  margin-left: 10px;
+}
+.error .arrow,
+.error .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.error .arrow {
+  border-width: 11px;
+}
+.error .arrow:after {
+  content: "";
+  border-width: 10px;
+}
+.error.right .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+}
+.error.right .arrow:after {
+  bottom: -10px;
+  left: 1px;
+  content: " ";
+  border-right-color: #c12e2a;
+  border-left-width: 0;
+}
+.error-title {
+  color: #ffffff;
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  background-color: #c12e2a;
+}

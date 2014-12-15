@@ -90,8 +90,16 @@
                             <div class="form-group">
                               <div class="row">
                                 <div class="col-xs-6">
-                                  <input type="email" ng-model="email" placeholder="Email" required>
+                                  <input type="email" name="input" ng-model="email" placeholder="Email" required>
                                 </div>
+                                <div class="col-xs-4" ng-show="editForm.input.$error.email">
+                                    <div class="error-popover">
+                                      <div class="error right">
+                                        <div class="arrow"></div>
+                                        <h3 class="error-title">Not valid email!</h3>
+                                      </div>
+                                    </div>
+                                  </div>
                               </div>
                             </div>
                             <div class="form-group">
@@ -114,12 +122,10 @@
                                 <div class="row">
                                   <div class="col-xs-6">
                                     <input type="url" name="input" ng-model="social_name" placeholder="{{social_placeholder}}">
-                                    <span class="error" ng-show="editForm.input.$error.url">
-                                    Not valid url!</span>
                                   </div>
                                   <div class="col-xs-2">
                                     <span class="btn red-btn" ng-click="removeLink($index)">X</span>
-                                  </div>
+                                  </div>  
                                 </div>
                               </div>
                             </div>
