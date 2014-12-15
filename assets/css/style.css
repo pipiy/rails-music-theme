@@ -2309,6 +2309,7 @@ textarea:-moz-placeholder {font-size: 18px; font-weight: 400; color: #7380b0;}
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="url"],
 textarea,
 .select_styled {
     -webkit-appearance: none;
@@ -2327,12 +2328,14 @@ textarea,
 }
 input[type="text"],
 input[type="password"],
-input[type="email"]{
+input[type="email"],
+input[type="url"]{
     height: 50px;
 }
 .ie8 input[type="text"],
 .ie8 input[type="password"],
-.ie8 input[type="email"]{
+.ie8 input[type="email"],
+.ie8 input[type="url"]{
     line-height: 50px;
 }
 textarea {
@@ -2344,6 +2347,7 @@ textarea {
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
+input[type="url"]:focus,
 textarea:focus {
     border: 1px solid #dbe37e;
 }
