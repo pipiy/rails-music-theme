@@ -113,7 +113,9 @@
                               <div class="form-group">
                                 <div class="row">
                                   <div class="col-xs-6">
-                                    <input type="url" ng-model="social_name" placeholder="{{social_placeholder}}">
+                                    <input type="url" name="input" ng-model="social_name" placeholder="{{social_placeholder}}">
+                                    <span class="error" ng-show="editForm.input.$error.url">
+                                    Not valid url!</span>
                                   </div>
                                   <div class="col-xs-2">
                                     <span class="btn red-btn" ng-click="removeLink($index)">X</span>
