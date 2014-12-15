@@ -410,3 +410,7 @@ body {
   margin-top: 20px;
   font-family: Merriweather;
 }
+.submit-changes {
+  float: right;
+  margin-bottom: 30px;
+}
