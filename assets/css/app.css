@@ -414,3 +414,6 @@ body {
   float: right;
   margin-bottom: 30px;
 }
+.fileinput-new img {
+  border-radius: 0;
+}
