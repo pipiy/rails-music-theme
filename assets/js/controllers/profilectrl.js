@@ -35,9 +35,11 @@ angular.module("appProfile", [])
 		$scope.social_placeholder = "http://www.example.com"
 
 		$scope.addSocial = function(){
-			$scope.social_links.push({
-				social_name: 	$scope.social_name
-			});
+			if($scope.social_links.length <= 3){
+				$scope.social_links.push({
+					social_name: 	$scope.social_name
+				});
+			}
 		}
 		$scope.removeLink = function(index){
 			$scope.social_links.splice(index, 1)
