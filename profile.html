@@ -16,6 +16,15 @@
     <script src="assets/js/jasny-bootstrap.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
     <script src="assets/js/controllers/profilectrl.js"></script>
+
+    <!-- Audio Player -->
+    <link href="assets/css/jplayer.css" rel="stylesheet">
+    <script src="assets/js/jplayer/jquery.jplayer.min.js"></script>
+    <script src="assets/js/jplayer/jplayer.playlist.min.js"></script>
+    <script src="assets/js/jplayer/jquery.transform2d.js"></script>
+    <script src="assets/js/jplayer/jquery.grab.js"></script>
+    <script src="assets/js/jplayer/mod.csstransforms.min.js"></script>
+    <script src="assets/js/jplayer/circle.player.js"></script>
   </head>
   <body ng-app="appProfile" ng-controller="profileCtrl">
     <div class="profile fileinput-new" data-provides="fileinput">
@@ -73,7 +82,40 @@
               <!-- Tab panes -->
               <div class="tab-content">
                 <div ng-show="isSelected(1)">
-                oldldlddl
+                  <div class="col-sm-12">
+                    <div class="albums-slider">
+                      <div class="albums-item active" style="">
+                          <!-- Audio Player -->
+                        <div class="albums-player">
+                          <img src="images/albums-slider-3.jpg" alt="">
+                          <div id="albums-3" class="jp-jplayer" style="width: 0px; height: 0px;"><img id="jp_poster_3" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_3" preload="auto" src="http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"></audio></div>
+                          <div id="albums-container-3" class="jp-audio jp-audio3">
+                            <div class="jp-gui jp-interface">
+                              <div class="jp-controls jp-buttons clearfix">
+                                <a href="javascript:;" class="jp-previous" tabindex="1" hidefocus="true" style="outline: none;">previous</a>
+                                <a href="javascript:;" class="jp-play" tabindex="1" hidefocus="true" style="outline: none; display: none;">play</a>
+                                <a href="javascript:;" class="jp-pause" tabindex="1" hidefocus="true" style="outline: none; display: inline-block;">pause</a>
+                                <a href="javascript:;" class="jp-next" tabindex="1" hidefocus="true" style="outline: none;">next</a>
+                                <div class="jp-progress">
+                                  <div class="jp-seek-bar jp-seeking-bg" style="width: 0%;">
+                                    <div class="jp-play-bar" style="width: 0%;">
+                                      <div class="jp-seek-handle"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="jp-meta clearfix">
+                                  <div class="song-title"><span class="item-song">Unforgivable Sinner</span></div>
+                                  <div class="jp-duration">00:00</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/ Audio Player -->
+                        <span class="albums-title">Apres Ski</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div ng-show="isSelected(2)">asdasd</div>
                 <div ng-show="isSelected(3)">
