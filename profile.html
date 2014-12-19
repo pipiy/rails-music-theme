@@ -15,10 +15,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/js/jasny-bootstrap.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.min.js"></script>
+    <script src="assets/js/videogular/videogular.js"></script>
+    <script src="assets/js/videogular/plugins/controls.js"></script>
     <script src="assets/js/controllers/profilectrl.js"></script>
-
-    <!-- Audio Player -->
-    <link href="assets/css/jplayer.css" rel="stylesheet">
   </head>
   <body ng-app="appProfile" ng-controller="profileCtrl">
     <div class="profile fileinput-new" data-provides="fileinput">
@@ -77,37 +77,22 @@
               <div class="tab-content">
                 <div ng-show="isSelected(1)">
                   <div class="col-sm-12">
-                    <div class="albums-slider">
-                      <div class="albums-item active" style="">
-                          <!-- Audio Player -->
-                        <div class="albums-player">
-                          <img src="images/albums-slider-1.jpg" alt="">
-                          <div id="albums-3" class="jp-jplayer" style="width: 0px; height: 0px;"><img id="jp_poster_3" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_3" preload="auto" src="http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"></audio></div>
-                          <div id="albums-container-3" class="jp-audio jp-audio3">
-                            <div class="jp-gui jp-interface">
-                              <div class="jp-controls jp-buttons clearfix">
-                                <a href="javascript:;" class="jp-previous" tabindex="1" hidefocus="true" style="outline: none;">previous</a>
-                                <a href="javascript:;" class="jp-play" tabindex="1" hidefocus="true" style="outline: none; display: none;">play</a>
-                                <a href="javascript:;" class="jp-pause" tabindex="1" hidefocus="true" style="outline: none; display: inline-block;">pause</a>
-                                <a href="javascript:;" class="jp-next" tabindex="1" hidefocus="true" style="outline: none;">next</a>
-                                <div class="jp-progress">
-                                  <div class="jp-seek-bar jp-seeking-bg" style="width: 0%;">
-                                    <div class="jp-play-bar" style="width: 0%;">
-                                      <div class="jp-seek-handle"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta clearfix">
-                                  <div class="song-title"><span class="item-song">Unforgivable Sinner</span></div>
-                                  <div class="jp-duration">00:00</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--/ Audio Player -->
-                        <span class="albums-title">Apres Ski</span>
-                      </div>
+                    <div ng-controller="audioCtrl" class="videogular-container">
+                      <videogular vg-theme="config.theme.url" class="videogular-container audio player-wrapper">
+                        <vg-audio vg-src="audio"></vg-audio>
+
+                        <vg-controls>
+                          <vg-play-pause-button></vg-play-pause-button>
+                          <vg-timedisplay>{{ currentTime | date:'mm:ss' }}</vg-timedisplay>
+                          <vg-scrubBar>
+                            <vg-scrubbarcurrenttime></vg-scrubbarcurrenttime>
+                          </vg-scrubBar>
+                          <vg-timedisplay>{{ timeLeft | date:'mm:ss' }}</vg-timedisplay>
+                          <vg-volume>
+                            <vg-mutebutton></vg-mutebutton>
+                          </vg-volume>
+                        </vg-controls>
+                      </videogular>
                     </div>
                   </div>
                 </div>

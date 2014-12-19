@@ -1,4 +1,4 @@
-angular.module("appProfile", [])
+angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls'])
 	.controller("profileCtrl", ['$scope', function($scope){
 		// Tab form
 		$scope.tab = 1;
@@ -44,4 +44,16 @@ angular.module("appProfile", [])
 		$scope.removeLink = function(index){
 			$scope.social_links.splice(index, 1)
 		}
+	}])
+	// Audio Player
+	.controller("audioCtrl", ['$scope', '$sce', function ($scope, $sce) {
+		$scope.audio = [
+			{src: $sce.trustAsResourceUrl("http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3"), type: "audio/mpeg"},
+			{src: $sce.trustAsResourceUrl("http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"), type: "audio/ogg"}
+		];
+		$scope.config = {
+			theme: {
+				url: "assets/css/videogular/themes/default/videogular.css"
+			}
+		};
 	}]);
