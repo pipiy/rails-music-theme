@@ -1,4 +1,4 @@
-angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls'])
+angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', "com.2fdevs.videogular.plugins.overlayplay", "com.2fdevs.videogular.plugins.poster"])
 	.controller("profileCtrl", ['$scope', function($scope){
 		// Tab form
 		$scope.tab = 1;
@@ -56,4 +56,52 @@ angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs
 				url: "assets/css/videogular/themes/default/videogular.css"
 			}
 		};
-	}]);
+	}])
+	// Video Player
+	.controller("videoCtrl", ['$scope', '$sce', function ($scope, $sce) {
+		$scope.config = {
+			sources: [
+				{src: $sce.trustAsResourceUrl("http://www.videogular.com/assets/videos/videogular.mp4"), type: "video/mp4"},
+				{src: $sce.trustAsResourceUrl("http://www.videogular.com/assets/videos/videogular.webm"), type: "video/webm"},
+				{src: $sce.trustAsResourceUrl("http://www.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
+			],
+			tracks: [
+				{
+					src: "pale-blue-dot.vtt",
+					kind: "subtitles",
+					srclang: "en",
+					label: "English",
+					default: ""
+				}
+			],
+			theme: {
+				url: "assets/css/videogular/themes/default/videogular.css"
+			},
+			plugins: {
+				poster: "images/videogular/videogular-poster.png"
+			}
+		};
+	}])
+	.directive("myLogoPlugin",
+		["VG_STATES", function(VG_STATES) {
+			return {
+				restrict: "E",
+				require: "^videogular",
+				template: "<img src='images/videogular/videogular-logo.png' ng-show='showLogo'>",
+				link: function(scope, elem, attrs, API) {
+					scope.showLogo = true;
+
+					scope.$watch(
+						function() {
+							return API.currentState;
+						},
+						function(newVal, oldVal) {
+							if (newVal != oldVal) {
+								scope.showLogo = (newVal != VG_STATES.PLAY);
+							}
+						}
+					)
+				}
+			}
+		}
+	]);
