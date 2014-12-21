@@ -75,10 +75,11 @@
               </ul>
               <!-- Tab panes -->
               <div class="tab-content">
-                <div ng-show="isSelected(1)">
+                <div ng-show="isSelected(1)" ng-controller="audioCtrl">
+                  Click me: <input type="checkbox" ng-model="clickPlay"><br/>
                   <div class="col-sm-12">
-                    <div ng-controller="audioCtrl" class="videogular-container">
-                      <videogular vg-theme="config.theme.url" class="videogular-container audio player-wrapper">
+                    <div class="videogular-container">
+                      <videogular vg-theme="config.theme.url" ng-show="clickPlay" class="videogular-container audio player-wrapper">
                         <vg-audio vg-src="audio"></vg-audio>
 
                         <vg-controls>
