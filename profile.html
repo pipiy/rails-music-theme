@@ -9,6 +9,7 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/app.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/videogular/style.css" rel="stylesheet">
     <link href="assets/css/jasny-bootstrap.css" rel="stylesheet">
     <link href="assets/css/docs.min.css" rel="stylesheet">
 
@@ -18,6 +19,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.min.js"></script>
     <script src="assets/js/videogular/videogular.js"></script>
     <script src="assets/js/videogular/plugins/controls.js"></script>
+    <script src="assets/js/videogular/plugins/overlay-play.js"></script>
+    <script src="assets/js/videogular/plugins/poster.js"></script>
     <script src="assets/js/controllers/profilectrl.js"></script>
   </head>
   <body ng-app="appProfile" ng-controller="profileCtrl">
@@ -97,7 +100,33 @@
                     </div>
                   </div>
                 </div>
-                <div ng-show="isSelected(2)">asdasd</div>
+                <div ng-show="isSelected(2)" ng-controller="videoCtrl">
+                  <div class="videogular-container">
+                    <videogular vg-theme="config.theme.url">
+                      <vg-video vg-src="config.sources"
+                            vg-tracks="config.tracks">
+                      </vg-video>
+
+                      <vg-controls>
+                        <vg-play-pause-button></vg-play-pause-button>
+                        <vg-timedisplay>{{ currentTime | date:'mm:ss' }}</vg-timedisplay>
+                        <vg-scrubBar>
+                          <vg-scrubbarcurrenttime></vg-scrubbarcurrenttime>
+                        </vg-scrubBar>
+                        <vg-timedisplay>{{ timeLeft | date:'mm:ss' }}</vg-timedisplay>
+                        <vg-volume>
+                          <vg-mutebutton></vg-mutebutton>
+                          <vg-volumebar></vg-volumebar>
+                        </vg-volume>
+                        <vg-fullscreenButton></vg-fullscreenButton>
+                      </vg-controls>
+
+                      <my-logo-plugin></my-logo-plugin>
+                      <vg-overlay-play></vg-overlay-play>
+                      <vg-poster-image vg-url='config.plugins.poster'></vg-poster-image>
+                    </videogular>
+                  </div>
+                </div>
                 <div ng-show="isSelected(3)">
                   <h5>Edit your account</h5>
                   <div class="edit-form">
