@@ -1,0 +1,129 @@
+<html lang="en">
+  <head>
+
+    <title>
+      Sign Up
+    </title>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/docs.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/jasny-bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/jasny-bootstrap.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="assets/js/controllers/signupctrl.js"></script>
+  </head>
+  <body ng-app="appSignUp" ng-controller="signupCtrl">
+		<div class="container" data-provides="fileinput">
+			<div class="signup">
+		    <header class="page-header">
+			    <h2 class="page-title">Create an account</h2>
+			  </header>
+
+				<div class="row">
+					<div class="signup_form">
+						<form name="signupForm" ng-submit="signupForm.$valid && new_user()" novalidate>
+					    <div class="panel">
+					      <div class="panel-heading">
+					        <div class="row">
+					          <div class="col-md-12">
+					            <div class="col-md-4">
+					              <figure>
+					              	<div class="fileinput fileinput-new" data-provides="fileinput">
+						              	<div class="fileinput-new white-content">
+						                	<img class="img-thumbnail img-responsive" ng-src="assets/images/account-avatar.png">
+					                	</div>
+					                	<div class="fileinput-preview fileinput-exists">
+					                	</div>
+												    <div class="btn-avatar">
+													    <span class=" btn-file btn blue-btn"><span class="fileinput-new">Up your Photo</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+													    <a href="#" class="btn red-btn fileinput-exists" data-dismiss="fileinput">Remove</a>
+													  </div>
+													</div>
+					              </figure>
+					            </div>
+					            <div class="col-md-6">
+					              <div class="form-group">
+					              	<div class="row">
+					              		<div class="col-xs-6 col-sm-6">
+					              			<input type="text" ng-model="first_name" placeholder="First Name" class="form-control" required>
+				              			</div>
+				              			<div class="col-xs-6 col-sm-6">
+					              			<input type="text" ng-model="last_name" placeholder="Last Name" class="form-control" required>
+				              			</div>
+			              			</div>
+					            	</div>
+					            </div>
+					            <div class="col-md-6">
+					              <div class="form-group">
+					              	<input type="email" ng-model="email" placeholder="Email" class="form-control" required>
+					            	</div>
+					            </div>
+					            <div class="col-md-6">
+					            	<div class="form-group">
+					            		<div class="row">
+								            <div class="col-xs-6 col-sm-6">
+							              	<input type="password" ng-model="password" placeholder="Password" class="form-control" required>
+								            </div>
+								            <div class="col-xs-6 col-sm-6">
+							              	<input type="password" ng-model="confirm_password" placeholder="Confirm Password" class="form-control" required>
+								            </div>
+							            </div>
+						            </div>
+					            </div>
+					            <div class="sign-footer">
+					            	<button class="btn-lg green-btn space">Sign Up</button>
+				            	</div>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					  </form>
+				  </div>
+				  <!--Pop-up window -->
+				  <div class="signup_form">
+						<form>
+				      <div class="panel-heading">
+				        <div class="row">
+				          <div class="col-md-12">
+				            <div class="col-md-4">
+				              <figure>
+				              	<div class="fileinput-preview fileinput-exists">
+			                	</div>
+				              </figure>
+				            </div>
+				            <div class="col-md-6">
+				              <div class="form-group">
+				              	<div class="row">
+				              		<div class="col-xs-6 col-sm-6 indent">
+				              			<input type="text" ng-show="first_name" ng-readonly="first_name" placeholder="{{first_name}}" class="form-control" required>
+			              			</div>
+			              			<div class="col-xs-6 col-sm-6 indent">
+				              			<input type="text" ng-show="last_name" ng-readonly="last_name" placeholder="{{last_name}}" class="form-control" required>
+			              			</div>
+			              			<div class="col-xs-12 col-sm-12 indent">
+					              		<input type="email" ng-show="email" ng-readonly="email" placeholder="{{email}}" class="form-control" required>
+				              		</div>
+
+				              		<div class="col-xs-6 col-sm-6 indent">
+						              	<input type="password" ng-show="password" ng-readonly="password" placeholder="{{password}}" class="form-control" required>
+							            </div>
+							            <div class="col-xs-6 col-sm-6 indent">
+						              	<input type="password" ng-show="confirm_password" ng-readonly="confirm_password" placeholder="{{confirm_password}}" class="form-control" required>
+							            </div>
+		              			</div>
+				            	</div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+					  </form>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
