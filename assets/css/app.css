@@ -423,8 +423,7 @@ body {
 
 .error {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1px;
   z-index: 1010;
   display: none;
   max-width: 276px;
