@@ -15,8 +15,8 @@
 }
 
 videogular {
-	width: 50%;
-	height: 50%;
+	width: 100%;
+	height: 100%;
 	position: relative;
 	background-color: #000000;
 	display: block;
