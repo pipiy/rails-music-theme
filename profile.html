@@ -101,7 +101,9 @@
                   </div>
                 </div>
                 <div ng-show="isSelected(2)" ng-controller="videoCtrl">
-                  <div class="videogular-container">
+                  <div class="row">
+                  <div class="col-md-6">
+                    <div class="post-format-video">
                     <videogular vg-theme="config.theme.url">
                       <vg-video vg-src="config.sources"
                             vg-tracks="config.tracks">
@@ -125,6 +127,14 @@
                       <vg-overlay-play></vg-overlay-play>
                       <vg-poster-image vg-url='config.plugins.poster'></vg-poster-image>
                     </videogular>
+                    <div class="post-title">
+                     <h4>Lorem ipsulum dolor sit amet</h4>
+                    </div>
+                    <div class="post-format">
+                      <span class="post-label label-video"></span>
+                    </div>
+                    </div>
+                    </div>
                   </div>
                 </div>
                 <div ng-show="isSelected(3)">
