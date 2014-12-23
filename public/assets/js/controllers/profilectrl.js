@@ -48,8 +48,8 @@ angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs
 	// Audio Player
 	.controller("audioCtrl", ['$scope', '$sce', function ($scope, $sce) {
 		$scope.audio = [
-			{src: $sce.trustAsResourceUrl("http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3"), type: "audio/mpeg"},
-			{src: $sce.trustAsResourceUrl("http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"), type: "audio/ogg"}
+			{src: $sce.trustAsResourceUrl("https://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3"), type: "audio/mpeg"},
+			{src: $sce.trustAsResourceUrl("https://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"), type: "audio/ogg"}
 		];
 		$scope.config = {
 			theme: {
@@ -61,9 +61,9 @@ angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs
 	.controller("videoCtrl", ['$scope', '$sce', function ($scope, $sce) {
 		$scope.config = {
 			sources: [
-				{src: $sce.trustAsResourceUrl("http://www.videogular.com/assets/videos/videogular.mp4"), type: "video/mp4"},
-				{src: $sce.trustAsResourceUrl("http://www.videogular.com/assets/videos/videogular.webm"), type: "video/webm"},
-				{src: $sce.trustAsResourceUrl("http://www.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
+				{src: $sce.trustAsResourceUrl("https://www.videogular.com/assets/videos/videogular.mp4"), type: "video/mp4"},
+				{src: $sce.trustAsResourceUrl("https://www.videogular.com/assets/videos/videogular.webm"), type: "video/webm"},
+				{src: $sce.trustAsResourceUrl("https://www.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
 			],
 			tracks: [
 				{
