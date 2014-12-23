@@ -88,4 +88,11 @@ angular.module("appHome", ['ui.bootstrap'])
 	  	$scope.user_password = '';
 	  	$log.info("User " + $scope.user_email + " logged in")
 	  };
-	}]);
+	}])
+
+	.directive("header", function(){
+		return {
+			restrict: "E",
+			templateUrl: "pages/home/header.html"
+		}
+	})
