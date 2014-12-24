@@ -23,7 +23,7 @@
     <script src="assets/js/videogular/plugins/poster.js"></script>
     <script src="assets/js/controllers/profilectrl.js"></script>
   </head>
-  <body ng-app="appProfile" ng-controller="profileCtrl">
+  <body ng-app="appProfile">
     <div class="profile fileinput-new" data-provides="fileinput">
       <div class="container">
         <div class="bs-example-popover" ng-show="twitt">
@@ -139,83 +139,7 @@
                 </div>
                 <div ng-show="isSelected(3)">
                   <h5>Edit your account</h5>
-                  <div class="edit-form">
-                    <form name="editForm" novalidate>
-                      <div class="edit-btn-avatar">
-                        <span class=" btn-file btn green-btn"><span class="fileinput-new">Edit your Photo</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                        <a href="#" class="btn red-btn fileinput-exists" data-dismiss="fileinput">Remove</a>
-                      </div>
-                      <div class="panel-edit-form">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <div class="row">
-                                <div class="col-xs-6">
-                                  <input type="text" ng-model="first_name" placeholder="First Name" required>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="row">
-                                <div class="col-xs-6">
-                                  <input type="text" ng-model="last_name" placeholder="Last Name" required>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="row">
-                                <div class="col-xs-6">
-                                  <input type="email" name="input" ng-model="email" placeholder="Email" required>
-                                </div>
-                                <div class="col-xs-4" ng-show="editForm.input.$error.email">
-                                    <div class="error-popover">
-                                      <div class="error right">
-                                        <div class="arrow"></div>
-                                        <h3 class="error-title">Not valid email!</h3>
-                                      </div>
-                                    </div>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="row">
-                                <div class="col-xs-12">
-                                  <textarea placeholder="Text Here" ng-model="twitt"></textarea>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <hr>
-                      <h5>Add a social link</h5>
-                      <div class="social-panel">
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <div class="social-links" ng-repeat="link in social_links">
-                              <div class="form-group">
-                                <div class="row">
-                                  <div class="col-xs-6">
-                                    <input type="url" name="input" ng-model="social_name" placeholder="{{social_placeholder}}">
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <span class="btn red-btn" ng-click="removeLink($index)">X</span>
-                                  </div>  
-                                </div>
-                              </div>
-                            </div>
-                            <div class="social-btn">
-                              <span ng-click="addSocial()"class="btn green-btn">Add</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <hr>
-                    <div class="submit-changes">
-                      <button class="btn-lg red-btn">Submit changes</button>
-                    </div> 
-                    </form>
-                  </div>
+                  <edituser></edituser>
                 </div>
               </div>
             </div>
@@ -225,3 +149,83 @@
     </div>
   </body>
 </html>
+
+<script type="text/ng-template" id="settings.html">
+  <div class="edit-form">
+    <form name="editForm" novalidate>
+      <div class="edit-btn-avatar">
+        <span class=" btn-file btn green-btn"><span class="fileinput-new">Edit your Photo</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+        <a href="#" class="btn red-btn fileinput-exists" data-dismiss="fileinput">Remove</a>
+      </div>
+      <div class="panel-edit-form">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-6">
+                  <input type="text" ng-model="first_name" placeholder="First Name" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-6">
+                  <input type="text" ng-model="last_name" placeholder="Last Name" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-6">
+                  <input type="email" name="input" ng-model="email" placeholder="Email" required>
+                </div>
+                <div class="col-xs-4" ng-show="editForm.input.$error.email">
+                    <div class="error-popover">
+                      <div class="error right">
+                        <div class="arrow"></div>
+                        <h3 class="error-title">Not valid email!</h3>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-12">
+                  <textarea placeholder="Text Here" ng-model="twitt"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h5>Add a social link</h5>
+      <div class="social-panel">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="social-links" ng-repeat="link in social_links">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <input type="url" name="input" ng-model="social_name" placeholder="{{social_placeholder}}">
+                  </div>
+                  <div class="col-xs-2">
+                    <span class="btn red-btn" ng-click="removeLink($index)">X</span>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="social-btn">
+              <span ng-click="addSocial()"class="btn green-btn">Add</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    <div class="submit-changes">
+      <button class="btn-lg red-btn">Submit changes</button>
+    </div> 
+    </form>
+  </div> 
+</script>

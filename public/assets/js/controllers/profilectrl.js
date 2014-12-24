@@ -1,5 +1,5 @@
 angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', "com.2fdevs.videogular.plugins.overlayplay", "com.2fdevs.videogular.plugins.poster"])
-	.controller("profileCtrl", ['$scope', function($scope){
+	.controller("editProfileCtrl", ['$scope', function($scope){
 		// Tab form
 		$scope.tab = 1;
 
@@ -104,4 +104,12 @@ angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs
 				}
 			}
 		}
-	]);
+	])
+
+	.directive("edituser", function(){
+		return {
+			restrict: "E",
+			controller: "editProfileCtrl",
+			templateUrl: "settings.html"
+		}
+	})
