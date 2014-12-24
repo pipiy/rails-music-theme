@@ -70,11 +70,8 @@ angular.module("appHome", ['ui.bootstrap'])
 			});
 		};
 	}])
-	.controller("homeCtrl", ['$scope', '$modal', '$log', function($scope, $modal, $log){
-		
-
+	.controller("modalCtrl", ['$scope', '$modal', '$log', function($scope, $modal, $log){
 		// Sign in modal window
-
 		$scope.users = [];
 
 	  $scope.open = function(size) {
