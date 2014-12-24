@@ -17,4 +17,11 @@ angular.module("appSignUp", [])
 				$scope.confirm_password = '';
 			}
 		};
-	}]);
+	}])
+	.directive("signup", function(){
+		return {
+			restrict: "E",
+			controller: "signupCtrl",
+			templateUrl: "signup.html"
+		}
+	})
