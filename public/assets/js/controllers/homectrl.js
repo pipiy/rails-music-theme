@@ -29,8 +29,7 @@ angular.module("appHome", ['ui.bootstrap'])
 			concert: "Live Concert" 
 		}];
 	}])
-	.controller("homeCtrl", ['$scope', '$modal', '$log', function($scope, $modal, $log){
-		
+	.controller("blogPostCtrl", ['$scope', function($scope){
 		// Blog  posts
 		$scope.post_items = 
 		[
@@ -69,7 +68,10 @@ angular.module("appHome", ['ui.bootstrap'])
 				image: 			$scope.image,
 				text: 			$scope.text
 			});
-		}
+		};
+	}])
+	.controller("homeCtrl", ['$scope', '$modal', '$log', function($scope, $modal, $log){
+		
 
 		// Sign in modal window
 
@@ -107,3 +109,10 @@ angular.module("appHome", ['ui.bootstrap'])
 			templateUrl: "post.html"
 		}
 	})
+	.directive("blogpost", function(){
+		return {
+			restrict: "E",
+			controller: "blogPostCtrl",
+			templateUrl: "blog-post.html"
+		}
+	});

@@ -72,42 +72,7 @@
       <div class="container">
         <!-- row-->
         <div class="row content">
-          <div class="col-sm-4" ng-repeat="post_item in post_items">
-            <div class="post-item-popular boxed" >
-              <div class="post-meta-top">
-                <h2 class="post-title">{{post_item.title}}</h2>
-                <h6 class="post-subtitle">{{post_item.subtitle}}</h6>
-                <ul class="post-links-alt">
-                  <li class="post-date">
-                    <a href="#">{{post_item.date}}</a>
-                  </li>
-                  <li class="post-author">
-                    <a href="#">{{post_item.author}}</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="post-image">
-                <img src="{{post_item.image}}" alt="" />
-              </div>
-              <div class="post-desc">
-                <p>{{post_item.text}}</p>
-              </div>
-              <div class="post-meta-bot">
-                <ul class="post-links clearfix">
-                  <li class="post-comments">
-                    <a href="#">
-                      <i class="icon-small-comment"></i>545
-                    </a>
-                  </li>
-                  <li class="post-more">
-                    <a href="#">
-                      <i class="icon-small-next"></i>Read more
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <blogpost></blogpost>
         </div>
       </div>
     </div>
@@ -245,5 +210,44 @@
         </div>
       </div>
     </div>
+  </script>
+
+  <script type="text/ng-template" id="blog-post.html">
+    <div class="col-sm-4" ng-repeat="post_item in post_items">
+      <div class="post-item-popular boxed" >
+        <div class="post-meta-top">
+          <h2 class="post-title">{{post_item.title}}</h2>
+          <h6 class="post-subtitle">{{post_item.subtitle}}</h6>
+          <ul class="post-links-alt">
+            <li class="post-date">
+              <a href="#">{{post_item.date}}</a>
+            </li>
+            <li class="post-author">
+              <a href="#">{{post_item.author}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="post-image">
+          <img src="{{post_item.image}}" alt="" />
+        </div>
+        <div class="post-desc">
+          <p>{{post_item.text}}</p>
+        </div>
+        <div class="post-meta-bot">
+          <ul class="post-links clearfix">
+            <li class="post-comments">
+              <a href="#">
+                <i class="icon-small-comment"></i>545
+              </a>
+            </li>
+            <li class="post-more">
+              <a href="#">
+                <i class="icon-small-next"></i>Read more
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> 
   </script>
 </html>
