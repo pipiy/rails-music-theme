@@ -1,5 +1,5 @@
 angular.module("appHome", ['ui.bootstrap'])
-	.controller("homeCtrl", ['$scope', '$modal', '$log', function($scope, $modal, $log){
+	.controller("carouselCtrl", ['$scope', function($scope){
 		$scope.interval = 5000;
 		$scope.slides = [
 			{image: "assets/images/bg-1.jpg", title: "Example headline.", text: "Praesent magna nunc, tincidunt pretium conseq uatd apibus, mollis nec odio. Nunfeugiat moles tie orci, eu rutrum velit dignissim. Donec vel semper elit. Nunc dapibus tincidunt arcu, accon gue turpis semper vitae molestie orcifeugia."},
@@ -13,7 +13,8 @@ angular.module("appHome", ['ui.bootstrap'])
 				text: 		$scope.text
 			});
 		};
-
+	}])
+	.controller("postCtrl", ['$scope', function($scope){
 		// Live posts
 		$scope.posts = [{
 			image: "assets/images/post-img/post-img-3.jpg",
@@ -27,6 +28,8 @@ angular.module("appHome", ['ui.bootstrap'])
 			}],
 			concert: "Live Concert" 
 		}];
+	}])
+	.controller("homeCtrl", ['$scope', '$modal', '$log', function($scope, $modal, $log){
 		
 		// Blog  posts
 		$scope.post_items = 
@@ -90,9 +93,17 @@ angular.module("appHome", ['ui.bootstrap'])
 	  };
 	}])
 
-	.directive("header", function(){
+	.directive("gallery", function(){
 		return {
 			restrict: "E",
-			templateUrl: "pages/home/header.html"
+			controller: "carouselCtrl",
+			templateUrl: "carousel.html"
+		}
+	})
+	.directive("post", function(){
+		return {
+			restrict: "E",
+			controller: "postCtrl",
+			templateUrl: "post.html"
 		}
 	})
