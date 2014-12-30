@@ -336,7 +336,7 @@ p.italic {font-style: italic;}
   border-bottom: 0 !important;
 }
 @media (min-width:479px) {
-  .ololo {
+  .indent-space {
     margin-bottom: 100px;
   }
 }
