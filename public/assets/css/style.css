@@ -335,6 +335,11 @@ p.italic {font-style: italic;}
 .profile .page-header {
   border-bottom: 0 !important;
 }
+@media (min-width:479px) {
+  .ololo {
+    margin-bottom: 100px;
+  }
+}
 
 /* Popover form
 -------------------------------------------------- */
