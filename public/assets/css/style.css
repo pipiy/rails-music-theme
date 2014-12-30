@@ -322,6 +322,9 @@ p.italic {font-style: italic;}
   .fileinput-preview.fileinput-exists {
     margin-bottom: 20px;
   }
+  img {
+    width: 100%;
+  }
 }
 /*-----------------------------------*/
 /* Profile page */
