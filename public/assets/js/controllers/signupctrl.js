@@ -1,5 +1,6 @@
 angular.module("appSignUp", [])
 	.controller("signupCtrl", ['$scope', function($scope){
+		$scope.myPathVariable = 'profile.html';
 		$scope.users = [];
 		$scope.new_user = function(){
 			if($scope.password === $scope.confirm_password) {

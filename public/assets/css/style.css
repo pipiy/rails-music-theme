@@ -70,7 +70,6 @@
 /* Global Reset */
 /*-----------------------------------*/
 .bs-docs-nav .navbar-brand, .bs-docs-nav .navbar-nav>li>a {
-  text-transform: uppercase;
   font-weight: 600 !important;
   color: #777777 !important;
 }
