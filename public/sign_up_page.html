@@ -81,8 +81,8 @@
 			            </div>
 		            </div>
 	            </div>
-	            <div class="sign-footer">
-	            	<button class="btn-lg green-btn space">Sign Up</button>
+	            <div class="col-md-6 sign-up-footer">
+	            	<a class="btn btn-lg green-btn space" ng-href="profile.html">Sign Up</a>
             	</div>
 	          </div>
 	        </div>
@@ -105,20 +105,20 @@
             <div class="col-md-6">
               <div class="form-group">
               	<div class="row">
-              		<div class="col-xs-6 col-sm-6 indent">
+              		<div class="col-xs-6 col-sm-6">
               			<input type="text" ng-show="first_name" ng-readonly="first_name" placeholder="{{first_name}}" class="form-control" required>
             			</div>
-            			<div class="col-xs-6 col-sm-6 indent">
+            			<div class="col-xs-6 col-sm-6">
               			<input type="text" ng-show="last_name" ng-readonly="last_name" placeholder="{{last_name}}" class="form-control" required>
             			</div>
-            			<div class="col-xs-12 col-sm-12 indent">
+            			<div class="col-xs-12 col-sm-12">
 	              		<input type="email" ng-show="email" ng-readonly="email" placeholder="{{email}}" class="form-control" required>
               		</div>
 
-              		<div class="col-xs-6 col-sm-6 indent">
+              		<div class="col-xs-6 col-sm-6">
 		              	<input type="password" ng-show="password" ng-readonly="password" placeholder="{{password}}" class="form-control" required>
 			            </div>
-			            <div class="col-xs-6 col-sm-6 indent">
+			            <div class="col-xs-6 col-sm-6">
 		              	<input type="password" ng-show="confirm_password" ng-readonly="confirm_password" placeholder="{{confirm_password}}" class="form-control" required>
 			            </div>
           			</div>
