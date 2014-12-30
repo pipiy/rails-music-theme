@@ -318,6 +318,11 @@ p.italic {font-style: italic;}
   padding: 10px 40px !important;
   font-size: 22px !important;
 }
+@media (max-width:479px) {
+  .fileinput-preview.fileinput-exists {
+    margin-bottom: 100px;
+  }
+}
 /*-----------------------------------*/
 /* Profile page */
 /*-----------------------------------*/
