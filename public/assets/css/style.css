@@ -65,6 +65,9 @@
 .icon-small-backward:before {content: "\e60a";}
 .icon-small-unmute:before {content: "\e60b";}
 .icon-small-forward:before {content: "\e60c";}
+.icon-small-fa-ellipsis-h:before {
+  content: "\f141";
+}
 
 /*-----------------------------------*/
 /* Global Reset */
@@ -494,6 +497,9 @@ p.italic {font-style: italic;}
 .social-links a {
   margin-top: 10px;
 }
+.social-links .fa-lg {
+  line-height: 1em;
+}
 .social-links .facebook {
   display: inline-block;
   width: 50px;
@@ -530,7 +536,7 @@ p.italic {font-style: italic;}
   color: #fff;
   border-radius: 2px;
 }
-.social-links .pinterest {
+.social-links .vk {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -538,7 +544,7 @@ p.italic {font-style: italic;}
   margin-bottom: 10px;
   text-align: center;
   font-size: 18px;
-  background-color: #e3262e;
+  background-color: #6383a8;
   color: #fff;
   border-radius: 2px;
 }
