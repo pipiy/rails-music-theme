@@ -496,6 +496,7 @@ p.italic {font-style: italic;}
 
 .social-links a {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .social-links .fa-lg {
   line-height: 1em;
