@@ -1,5 +1,7 @@
 angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', "com.2fdevs.videogular.plugins.overlayplay", "com.2fdevs.videogular.plugins.poster"])
 	.controller("editProfileCtrl", ['$scope', function($scope){
+		$scope.showDiv=false;
+		
 		// Tab form
 		$scope.tab = 1;
 
@@ -29,7 +31,7 @@ angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs
 			$scope.email = '';
 			$scope.twitt = '';
 		};
-
+	
 		//Social links
 		$scope.social_links = [];
 		$scope.social_placeholder = "http://www.example.com"
@@ -113,3 +115,15 @@ angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs
 			templateUrl: "settings.html"
 		}
 	})
+
+	.directive('ellipsisAnimated', function () { 
+    return {
+      restrict: "E",
+      template:
+          "<span class='ellipsis_animated-inner'>" +
+              "<span>.</span>" +
+              "<span>.</span>" +
+              "<span>.</span>" +
+          "</span>"
+    };
+	});
