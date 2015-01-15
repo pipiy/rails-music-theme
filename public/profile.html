@@ -5,7 +5,7 @@
     <title>
       Profile
     </title>
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/videogular/style.css" rel="stylesheet">
@@ -25,16 +25,25 @@
   <body ng-app="appProfile">
     <div class="profile fileinput-new" data-provides="fileinput">
       <div class="container">
-        <div class="bs-example-popover" ng-show="twitt">
+        <div class="bs-example-popover" ng-show="twitt" ng-model="twitter">
           <div class="popover top">
             <div class="arrow"></div>
-            <h3 class="popover-title">{{first_name}} says:</h3>
+            <h3 class="popover-title">{{first_name}} says<ellipsis-animated></ellipsis-animated></h3>
             <div class="popover-content">
               <p>{{twitt}}</p>
             </div>
           </div>
         </div>
         <header class="page-header">
+          <div class="input-twitt" ng-show="showDiv" >
+            <input type="text" placeholder="Your twitt goes here" ng-model="twitt">
+          </div>
+          <div class="pencil" ng-click="showDiv=!showDiv" ng-hide="showDiv">
+            <span class="icon-small-comment"></span>
+          </div>
+          <div class="closeBtn" ng-click="showDiv=!showDiv" ng-show="showDiv">
+            <span class="icon-small-delete"></span>
+          </div>
           <div class="fileinput-new">
             <img class="img-size img-thumbnail img-responsive" ng-src="assets/images/account-avatar.png">
           </div>
