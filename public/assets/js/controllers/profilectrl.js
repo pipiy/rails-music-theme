@@ -1,7 +1,6 @@
 angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', "com.2fdevs.videogular.plugins.overlayplay", "com.2fdevs.videogular.plugins.poster"])
 	.controller("editProfileCtrl", ['$scope', function($scope){
 		$scope.showDiv=false;
-		
 		// Tab form
 		$scope.tab = 1;
 
@@ -34,18 +33,28 @@ angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs
 	
 		//Social links
 		$scope.social_links = [];
-		$scope.social_placeholder = "http://www.example.com"
+		$scope.social_placeholder = "http://www.example.com";
+		$scope.fb_button = "Facebook";
+		$scope.gl_button = "Google+";
+		$scope.tw_button = "Twitter";
+		$scope.pin_button = "Pinterest";
 
-		$scope.addSocial = function(){
-			if($scope.social_links.length < 4){
-				$scope.social_links.push({
-					social_name: 	$scope.social_name
-				});
-			}
-		}
-		$scope.removeLink = function(index){
-			$scope.social_links.splice(index, 1)
-		}
+		$scope.addFacebook = function(){
+			$scope.social_facebook = "https://facebook.com"
+			$scope.social_links.push({social_name: $scope.social_facebook});
+		};
+		$scope.addGoogle = function(){
+			$scope.social_google = "https://plus.google.com"
+			$scope.social_links.push({social_name: $scope.social_google})	
+		};
+		$scope.addTwitter = function(){
+			$scope.social_twitter = "https://twitter.com"
+			$scope.social_links.push({social_name: $scope.social_twitter})	
+		};
+		$scope.addPinterest= function(){
+			$scope.social_pinterest = "https://pinterest.com"
+			$scope.social_links.push({social_name: $scope.social_pinterest})	
+		};
 	}])
 	// Audio Player
 	.controller("audioCtrl", ['$scope', '$sce', function ($scope, $sce) {

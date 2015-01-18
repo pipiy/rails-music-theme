@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
   line-height: 1.2em;
 	margin-bottom: .4em;
+  margin-top: .4em;
 }
 h1 {font-size: 46px; color: #644370; letter-spacing: -3px;}
 h2 {font-size: 34px;}
@@ -257,6 +258,30 @@ p.italic {font-style: italic;}
   color: #ffffff;
   border-radius: 0;
   border: 1px solid transparent;
+}
+.fb-button {
+  border-color: #3b5998;
+  background-color: #3b5998;
+  color: #ffffff;
+  border-radius: 0;
+}
+.gl-button {
+  border-color: #d34836;
+  background-color: #d34836;
+  color: #ffffff;
+  border-radius: 0;
+}
+.tw-button {
+  border-color: #33CCFF;
+  background-color: #33CCFF;
+  color: #ffffff;
+  border-radius: 0; 
+}
+.pin-button {
+  border-color: #e3262e;
+  background-color: #e3262e;
+  color: #ffffff;
+  border-radius: 0;  
 }
 /*-----------------------------------*/
 /* Sign in form */

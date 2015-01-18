@@ -5,7 +5,7 @@
     <title>
       Profile
     </title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/videogular/style.css" rel="stylesheet">
@@ -51,16 +51,16 @@
             <div class="fileinput-preview fileinput-exists"></div>
           </div>
           <div class="social-links">
-            <a class="facebook" href="#">
+            <a class="facebook" href="#" ng-show="social_facebook">
               <span class="icon-small-facebook"></span>
             </a>
-            <a href="#" class="google">
+            <a href="#" class="google" ng-show="social_google">
               <span class="icon-small-google"></span>
             </a>
-            <a href="#" class="twitter">
+            <a href="#" class="twitter" ng-show="social_twitter">
               <span class="icon-small-twitter"></span>
             </a>
-            <a href="#" class="pinterest">
+            <a href="#" class="pinterest" ng-show="social_pinterest">
               <span class="icon-small-pinterest"></span>
             </a>
           </div>
@@ -158,7 +158,6 @@
     </div>
   </body>
 </html>
-
 <script type="text/ng-template" id="settings.html">
   <div class="edit-form">
     <form name="editForm" novalidate>
@@ -189,13 +188,13 @@
                   <input type="email" name="input" ng-model="email" placeholder="Email" required>
                 </div>
                 <div class="col-xs-4" ng-show="editForm.input.$error.email">
-                    <div class="error-popover">
-                      <div class="error right">
-                        <div class="arrow"></div>
-                        <h3 class="error-title">Not valid email!</h3>
-                      </div>
+                  <div class="error-popover">
+                    <div class="error right">
+                      <div class="arrow"></div>
+                      <h3 class="error-title">Not valid email!</h3>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
           </div>
@@ -204,25 +203,54 @@
       <hr>
       <h5>Add a social link</h5>
       <div class="social-panel">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="social-links" ng-repeat="link in social_links">
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <input type="url" name="input" ng-model="social_name" placeholder="{{social_placeholder}}">
+        <form name="socialLinks" novalidate>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="social-links">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <input type="url" name="input" ng-model="social_facebook" placeholder="{{social_placeholder}}">
+                    </div>
+                    <div class="col-xs-2">
+                      <span class="btn fb-button" ng-click="addFacebook()" ng-disabled="social_facebook">{{fb_button}}</span>
+                    </div>  
                   </div>
-                  <div class="col-xs-2">
-                    <span class="btn red-btn" ng-click="removeLink($index)">X</span>
-                  </div>  
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <input type="url" name="input" ng-model="social_google" placeholder="{{social_placeholder}}">
+                    </div>
+                    <div class="col-xs-2">
+                      <span class="btn gl-button" ng-click="addGoogle()" ng-disabled="social_google">{{gl_button}}</span>
+                    </div>  
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <input type="url" name="input" ng-model="social_twitter" placeholder="{{social_placeholder}}">
+                    </div>
+                    <div class="col-xs-2">
+                      <span class="btn tw-button" ng-click="addTwitter()" ng-disabled="social_twitter">{{tw_button}}</span>
+                    </div>  
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <input type="url" name="input" ng-model="social_pinterest" placeholder="{{social_placeholder}}">
+                    </div>
+                    <div class="col-xs-2">
+                      <span class="btn pin-button" ng-click="addPinterest()" ng-disabled="social_pinterest">{{pin_button}}</span>
+                    </div>  
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="social-btn">
-              <span ng-click="addSocial()"class="btn green-btn">Add</span>
-            </div>
           </div>
-        </div>
+        </form>
       </div>
       <hr>
     <div class="submit-changes">
