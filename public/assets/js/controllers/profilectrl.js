@@ -1,6 +1,8 @@
 angular.module("appProfile", ['ngSanitize', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', "com.2fdevs.videogular.plugins.overlayplay", "com.2fdevs.videogular.plugins.poster"])
 	.controller("editProfileCtrl", ['$scope', function($scope){
-		$scope.showDiv=false;
+		$scope.showDiv = false;
+		$scope.alertBox = false;
+		$scope.successBox = false;
 		// Tab form
 		$scope.tab = 1;
 
