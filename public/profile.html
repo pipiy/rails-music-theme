@@ -25,6 +25,23 @@
   <body ng-app="appProfile">
     <div class="profile fileinput-new" data-provides="fileinput">
       <div class="container">
+        <!-- Success -->
+        <div class="success boxed" ng-show="!successBox">
+          <div class="success-body">
+            <h6><span>Success:</span> Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</h6>
+          </div>
+          <i class="success-icon" ng-click="successBox=!successBox">X</i>
+        </div>
+        <!--/ Success -->
+
+        <!-- Alert -->
+        <div class="alert boxed" ng-show="alertBox">
+          <div class="alert-body">
+            <h6><span>Error:</span> Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</h6>
+          </div>
+          <i class="alert-icon" ng-click="alertBox=!alertBox">X</i>
+        </div>
+        <!--/ Alert -->
         <div class="bs-example-popover" ng-show="twitt" ng-model="twitter">
           <div class="popover top">
             <div class="arrow"></div>
@@ -272,7 +289,7 @@
         </div>
       <hr>
       <div class="submit-changes">
-        <a class="btn btn-lg red-btn">Submit changes</a>
+        <a class="btn btn-lg red-btn" ng-click="alertBox=!alertBox">Submit changes</a>
       </div> 
     </form>
   </div> 
