@@ -350,6 +350,9 @@ p.italic {font-style: italic;}
     width: 100%;
   }
 }
+.bottom {
+  margin-bottom: 15px;
+}
 /*-----------------------------------*/
 /* Profile page */
 /*-----------------------------------*/
