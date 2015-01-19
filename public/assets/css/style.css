@@ -850,45 +850,19 @@ textarea:focus {
 /*-----------------------------------*/
 /* Alerts */
 /*-----------------------------------*/
-
 .alert {
   position: relative;
   padding: 0;
   border: none;
   border-radius: 0;
-  background-color: #fff !important;
+  background-color: #AD5251 !important;
   margin-right: 64px;
 }
-.alert-close {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: -64px;
-  bottom: 0;
-  float: none;
-  opacity: 1;
-  filter: alpha(opacity=100);
-  background-color: rgba(0,0,0,0);
-  overflow: hidden;
-  text-indent: 10000px;
-}
 .alert-body {padding: 24px 27px 26px; color: #7978b4;}
-.alert-warning .alert-body {color: #be5c8f;}
-.alert-error .alert-body {color: #cd4a3a;}
-.alert-success .alert-body {color: #b8c901;}
-.alert.bg-image-notice {background-position: -5px -15px;}
-.alert.bg-image-warning {background-position: -10px 8px;}
-.alert.bg-image-error {background-position: -40px -50px;}
-.alert.bg-image-success {background-position: -5px -20px;}
-
-.alert span, .alert p {
-  font-family: "Allerta", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
+.alert-body h6 {
+  text-align: center;
+  color: #ffffff;
 }
-.alert p {font-size: 17px; margin: 0;}
-
 .alert-icon {
   position: absolute;
   top: 0;
@@ -898,34 +872,40 @@ textarea:focus {
   margin: 0;
   width: 64px;
   background-color: #d98f88;
-  background-color: rgba(255, 241, 244, 0.24);
+  color: #fff;
+  padding: 25px;
+  font-size: 25px;
+  cursor: pointer;
   box-shadow: inset 5px 0 5px -2px rgba(104, 16, 52, 0.2);
 }
-.alert-icon:before {
-  content: '';
+.success {
+  position: relative;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: #51AD67 !important;
+  margin-right: 64px;
+}
+.success-body {padding: 24px 27px 26px; color: #7978b4;}
+.success-body h6 {
+  text-align: center;
+  color: #ffffff;
+}
+.success-icon {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -18px 0 0 -18px;
-  width: 36px;
-  height: 36px;
-  background: url(images/icons/alert-icons.png) 0 0 no-repeat;
+  top: 0;
+  left: auto;
+  right: -64px;
+  bottom: 0;
+  margin: 0;
+  width: 64px;
+  background-color: #88D9A5;
+  color: #fff;
+  padding: 25px;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: inset 5px 0 5px -2px rgba(104, 16, 52, 0.2);
 }
-.alert-warning .alert-icon:before {background-position: 0 -36px;}
-.alert-error .alert-icon:before {background-position: 0 -72px;}
-.alert-success .alert-icon:before {background-position: 0 -108px;}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-  .alert-icon:before {
-    background: url(images/icons/alert-icons-x2.png) no-repeat;
-    background-size: 36px auto;
-  }
-}
-@media (max-width: 479px) {
-  .alert-body {padding: 15px 20px;}
-  .alert span, .alert p {font-size: 14px; line-height: 18px;}
-}
-
 /*-----------------------------------*/
 /* Footer */
 /*-----------------------------------*/
