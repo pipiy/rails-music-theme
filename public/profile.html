@@ -160,7 +160,7 @@
 </html>
 <script type="text/ng-template" id="settings.html">
   <div class="edit-form">
-    <form name="editForm" novalidate>
+    <form name="editForm">
       <div class="edit-btn-avatar">
         <span class=" btn-file btn green-btn"><span class="fileinput-new">Edit your Photo</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
         <a href="#" class="btn red-btn fileinput-exists" data-dismiss="fileinput">Remove</a>
@@ -170,14 +170,10 @@
           <div class="col-md-12">
             <div class="form-group">
               <div class="row">
-                <div class="col-xs-6">
+                <div class="col-sm-6">
                   <input type="text" ng-model="first_name" placeholder="First Name" required>
                 </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-xs-6">
+                <div class="col-sm-6">
                   <input type="text" ng-model="last_name" placeholder="Last Name" required>
                 </div>
               </div>
@@ -185,9 +181,9 @@
             <div class="form-group">
               <div class="row">
                 <div class="col-xs-6">
-                  <input type="email" name="input" ng-model="email" placeholder="Email" required>
+                  <input type="email" name="email" ng-model="email" placeholder="Email" required>
                 </div>
-                <div class="col-xs-4" ng-show="editForm.input.$error.email">
+                <div class="col-xs-4" ng-show="editForm.email.$error.email">
                   <div class="error-popover">
                     <div class="error right">
                       <div class="arrow"></div>
@@ -202,60 +198,82 @@
       </div>
       <hr>
       <h5>Add a social link</h5>
-      <div class="social-panel">
-        <form name="socialLinks" novalidate>
+        <div class="social-panel">
           <div class="row">
             <div class="col-sm-12">
               <div class="social-links">
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-xs-6">
-                      <input type="url" name="input" ng-model="social_facebook" placeholder="{{social_placeholder}}">
-                    </div>
-                    <div class="col-xs-2">
+                    <div class="col-sm-6">
+                      <input type="url" name="facebook" ng-model="social_facebook" placeholder="{{social_placeholder}}" required>
                       <span class="btn fb-button" ng-click="addFacebook()" ng-disabled="social_facebook">{{fb_button}}</span>
-                    </div>  
+                    </div> 
+                    <div class="col-sm-4" ng-show="editForm.facebook.$error.url">
+                        <div class="error-popover">
+                          <div class="error right">
+                            <div class="arrow"></div>
+                            <h3 class="error-title">Not valid url!</h3>
+                          </div>
+                        </div>
+                      </div> 
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-xs-6">
-                      <input type="url" name="input" ng-model="social_google" placeholder="{{social_placeholder}}">
-                    </div>
-                    <div class="col-xs-2">
+                    <div class="col-sm-6">
+                      <input type="url" name="google" ng-model="social_google" placeholder="{{social_placeholder}}">
                       <span class="btn gl-button" ng-click="addGoogle()" ng-disabled="social_google">{{gl_button}}</span>
-                    </div>  
+                    </div> 
+                    <div class="col-sm-4" ng-show="editForm.google.$error.url">
+                        <div class="error-popover">
+                          <div class="error right">
+                            <div class="arrow"></div>
+                            <h3 class="error-title">Not valid url!</h3>
+                          </div>
+                        </div>
+                      </div> 
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-xs-6">
-                      <input type="url" name="input" ng-model="social_twitter" placeholder="{{social_placeholder}}">
-                    </div>
-                    <div class="col-xs-2">
+                    <div class="col-sm-6">
+                      <input type="url" name="twitter" ng-model="social_twitter" placeholder="{{social_placeholder}}">
                       <span class="btn tw-button" ng-click="addTwitter()" ng-disabled="social_twitter">{{tw_button}}</span>
-                    </div>  
+                    </div>
+                    <div class="col-sm-4" ng-show="editForm.twitter.$error.url">
+                        <div class="error-popover">
+                          <div class="error right">
+                            <div class="arrow"></div>
+                            <h3 class="error-title">Not valid url!</h3>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-xs-6">
-                      <input type="url" name="input" ng-model="social_pinterest" placeholder="{{social_placeholder}}">
-                    </div>
-                    <div class="col-xs-2">
+                    <div class="col-sm-6">
+                      <input type="url" name="pinterest" ng-model="social_pinterest" placeholder="{{social_placeholder}}">
                       <span class="btn pin-button" ng-click="addPinterest()" ng-disabled="social_pinterest">{{pin_button}}</span>
-                    </div>  
+                    </div>
+                    <div class="col-sm-4" ng-show="editForm.pinterest.$error.url">
+                        <div class="error-popover">
+                          <div class="error right">
+                            <div class="arrow"></div>
+                            <h3 class="error-title">Not valid url!</h3>
+                          </div>
+                        </div>
+                      </div>  
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
       <hr>
-    <div class="submit-changes">
-      <a class="btn btn-lg red-btn">Submit changes</a>
-    </div> 
+      <div class="submit-changes">
+        <a class="btn btn-lg red-btn">Submit changes</a>
+      </div> 
     </form>
   </div> 
 </script>
